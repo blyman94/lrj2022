@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08e190537173f84a8ba1f989a28200c, type: 3}
-  m_Name: PlayerBaseHealth
+  m_Script: {fileID: 11500000, guid: 204b0ee9b1de9224e9cdafc53a00e8a0, type: 3}
+  m_Name: RailgunCooldown
   m_EditorClassIdentifier: 
-  value: 3
+  value: 0
