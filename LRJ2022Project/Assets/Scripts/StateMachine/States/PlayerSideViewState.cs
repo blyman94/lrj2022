@@ -20,9 +20,4 @@ public class PlayerSideViewState : PlayerBaseState
     {
         
     }
-
-    public override void OnGameWorldHover()
-    {
-
-    }
 }

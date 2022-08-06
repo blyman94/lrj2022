@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d178362d1789a479cdc03d5e09d6ce, type: 3}
   m_Name: BasicEnemy
   m_EditorClassIdentifier: 
-  MaxHealth: 10
+  MaxHealth: 4
   Damage: 1
   MoveSpeed: 1
   MoveHeight: 4
-  CanAttackPerspective: 3
+  IsFlying: 0
+  IsArmored: 0
+  CanAttackPerspective: {fileID: 0}

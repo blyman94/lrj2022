@@ -1,5 +1,4 @@
 using UnityEngine;
-using Cinemachine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class PlayerStateMachine : MonoBehaviour
     private PlayerSideViewState _sideViewState;
     private PlayerTopViewState _topViewState;
 
-    
+    public Vector2 MousePosition { get; set; }
 
     private void Awake()
     {
@@ -58,7 +57,7 @@ public class PlayerStateMachine : MonoBehaviour
                 break;
             default:
                 newState = _currentState;
-                Debug.LogError("Perspective not recognized by " + 
+                Debug.LogError("Perspective not recognized by " +
                     "PlayerStateMachine.SwitchStates().");
                 break;
         }
@@ -70,11 +69,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     public void OnClickGameWorld()
     {
+        Debug.Log("Called");
         _currentState.OnClickGameWorld();
-    }
-
-    public void OnGameWorldHover()
-    {
-        _currentState.OnGameWorldHover();
     }
 }

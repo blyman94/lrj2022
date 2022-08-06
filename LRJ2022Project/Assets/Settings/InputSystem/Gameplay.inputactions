@@ -1,0 +1,54 @@
+{
+    "name": "Gameplay",
+    "maps": [
+        {
+            "name": "Main",
+            "id": "6f7fbff1-47bb-45b3-8d66-10d40e3c7dcd",
+            "actions": [
+                {
+                    "name": "MoveMouse",
+                    "type": "PassThrough",
+                    "id": "6209c704-d498-4323-adb4-1ba3244fa4df",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftClick",
+                    "type": "Button",
+                    "id": "cc5cbf55-e862-4d44-a9fe-fb720ecf3f7b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9e2ddb6c-ff81-4131-aa3d-8c854a53b37d",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveMouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "12e5777b-1b27-4e2c-a56d-2d2724246267",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
