@@ -11,7 +11,7 @@ public class PlayerStateMachine : MonoBehaviour
     public GameEvent SwitchToTopViewEvent;
 
     [Header("State Data")]
-    public float BombCooldownTimer;
+    public float BombCooldownTime;
 
     [Header("Prefabs")]
     public GameObject BombProjectilePrefab;
@@ -23,6 +23,7 @@ public class PlayerStateMachine : MonoBehaviour
     private PlayerSideViewState _sideViewState;
     private PlayerTopViewState _topViewState;
 
+    public bool IsFirstBomb { get; set; } = true;
     public Vector2 MousePosition { get; set; }
 
     private void Awake()
@@ -48,33 +49,6 @@ public class PlayerStateMachine : MonoBehaviour
         PlayerBaseState newState;
 
         switch (switchToPerspective.PerspectiveEnum)
-        {
-            case (PerspectiveEnum.FRONT):
-                newState = _frontViewState;
-                break;
-            case (PerspectiveEnum.SIDE):
-                newState = _sideViewState;
-                break;
-            case (PerspectiveEnum.TOP):
-                newState = _topViewState;
-                break;
-            default:
-                newState = _currentState;
-                Debug.LogError("Perspective not recognized by " +
-                    "PlayerStateMachine.SwitchStates().");
-                break;
-        }
-
-        _currentState.ExitState();
-        _currentState = newState;
-        _currentState.EnterState();
-    }
-
-    public void SwitchStates(PerspectiveEnum switchToPerspective)
-    {
-        PlayerBaseState newState;
-
-        switch (switchToPerspective)
         {
             case (PerspectiveEnum.FRONT):
                 newState = _frontViewState;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4095410514301283131}
   - component: {fileID: 4095410514301283129}
   - component: {fileID: 4095410514301283128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BombProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,6 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc293e20af5bfe4f958498a922f20e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bombDamage: 3
+  canDamageLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  explosionRadius: 8
+  explosionPrefab: {fileID: 8979585918745600921, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
   _dropAcceleration: 10
 --- !u!136 &4095410514301283129
 CapsuleCollider:

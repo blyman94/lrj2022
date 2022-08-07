@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 172817211}
   - component: {fileID: 172817210}
   - component: {fileID: 172817213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BasicEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,8 @@ MonoBehaviour:
   SwitchToFrontViewEvent: {fileID: 11400000, guid: 96e89c170f4d8644cb8c38e71d98fa33, type: 2}
   SwitchToSideViewEvent: {fileID: 11400000, guid: 7e5af107d03745546baa3f721af07a32, type: 2}
   SwitchToTopViewEvent: {fileID: 11400000, guid: bc7fb624901bf86478ca0889293b0a79, type: 2}
-  BombCooldownTimer: 0
+  BombCooldownTime: 5
+  IsFirstBomb: 1
   BombProjectilePrefab: {fileID: 4095410514301283133, guid: e73ca141bd4525047a0e5fba9ee0001a, type: 3}
 --- !u!4 &232494957
 Transform:
@@ -4365,6 +4366,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4095410514301283131, guid: e73ca141bd4525047a0e5fba9ee0001a, type: 3}
+      propertyPath: canDamageLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4095410514301283133, guid: e73ca141bd4525047a0e5fba9ee0001a, type: 3}
       propertyPath: m_Name
       value: BombProjectile
@@ -4375,3 +4380,64 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73ca141bd4525047a0e5fba9ee0001a, type: 3}
+--- !u!1001 &8905360288946664061
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944737604357085188, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979585918745600921, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_Name
+      value: Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979585918745600921, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
