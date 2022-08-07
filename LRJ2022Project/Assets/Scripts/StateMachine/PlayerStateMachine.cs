@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
@@ -9,6 +11,11 @@ public class PlayerStateMachine : MonoBehaviour
     public GameEvent SwitchToFrontViewEvent;
     public GameEvent SwitchToSideViewEvent;
     public GameEvent SwitchToTopViewEvent;
+
+    [Header("Side View State Data")] 
+    public GameObject fpsCrossHair;
+    public List<WeaponData> weapons;
+    
 
     [Header("State Data")]
     public float BombCooldownTime;

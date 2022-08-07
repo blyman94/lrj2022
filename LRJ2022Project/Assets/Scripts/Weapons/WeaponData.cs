@@ -10,6 +10,7 @@ public class WeaponData : ScriptableObject
     public int bulletCapacity;
     public float weaponCooldown;
     public float weaponReloadTime;
+    public int weaponRange;
     
     public void Fire()
     {

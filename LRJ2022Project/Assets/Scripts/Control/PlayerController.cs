@@ -38,8 +38,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnClick(InputAction.CallbackContext context)
     {
+        Debug.Log("OnClick");
         if (context.started)
         {
+            Debug.Log("ContextStarted");
             playerStateMachine.OnClickGameWorld();
         }
     }
