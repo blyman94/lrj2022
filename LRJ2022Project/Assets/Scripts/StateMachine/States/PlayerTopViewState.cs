@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerTopViewState : PlayerBaseState
 {
+    private float _bombCooldownTimer;
+
     public PlayerTopViewState(PlayerStateMachine context)
     {
         Context = context;
@@ -21,11 +23,17 @@ public class PlayerTopViewState : PlayerBaseState
 
     public override void OnClickGameWorld()
     {
-        if (Context.BombCooldownTimer <= 0)
+        if (_bombCooldownTimer <= 0)
         {
             Vector3 BombSpawnPos = new Vector3(Context.MousePosition.x, 64, Context.MousePosition.y);
             Context.SpawnBombAtPosition(BombSpawnPos);
-            Context.SwitchStates(PerspectiveEnum.SIDE);
+            _bombCooldownTimer = Context.BombCooldownTime;
+
+            if (Context.IsFirstBomb)
+            {
+                Context.SwitchStates(PerspectiveEnum.SIDE);
+                Context.IsFirstBomb = false;
+            }
         }
     }
 
@@ -33,5 +41,10 @@ public class PlayerTopViewState : PlayerBaseState
     {
         Context.BombCrosshairObject.transform.position =
             new Vector3(Context.MousePosition.x, 1.0f, Context.MousePosition.y);
+
+        if (_bombCooldownTimer > 0)
+        {
+            _bombCooldownTimer -= Time.deltaTime;
+        }
     }
 }

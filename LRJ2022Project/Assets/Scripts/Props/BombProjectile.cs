@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class BombProjectile : MonoBehaviour
 {
-    [Range(0,25)]
+    [SerializeField] private int bombDamage;
+    [SerializeField] private LayerMask canDamageLayer;
+    [SerializeField] private int explosionRadius = 8;
+    [SerializeField] private GameObject explosionPrefab;
+
+    [Range(0, 25)]
     [SerializeField] private int _dropAcceleration = 1;
 
     private float _currentSpeed = 0;
@@ -22,7 +27,22 @@ public class BombProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("We hit something!");
+        Vector3 explosionCenter = new Vector3(transform.position.x, 0, transform.position.z);
+
+        Collider[] collidersInRange = Physics.OverlapBox(explosionCenter,
+            (Vector3.one * explosionRadius), Quaternion.identity,
+            canDamageLayer);
+        foreach (Collider collider in collidersInRange)
+        {
+            Enemy enemy = collider.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(bombDamage);
+            }
+        }
+
+        Instantiate(explosionPrefab, explosionCenter, Quaternion.identity);
+
         Destroy(gameObject);
     }
 }
