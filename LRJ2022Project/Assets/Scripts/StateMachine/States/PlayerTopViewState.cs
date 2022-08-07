@@ -22,4 +22,9 @@ public class PlayerTopViewState : PlayerBaseState
             Context.BombCooldownTimer = 5.0f;
         }
     }
+
+    public override void UpdateState()
+    {
+        
+    }
 }

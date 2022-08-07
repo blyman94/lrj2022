@@ -19,4 +19,9 @@ public class PlayerFrontViewState : PlayerBaseState
     {
         
     }
+
+    public override void UpdateState()
+    {
+        
+    }
 }

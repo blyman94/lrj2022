@@ -34,17 +34,41 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void Update()
     {
-        if (BombCooldownTimer >= 0)
-        {
-            BombCooldownTimer -= Time.deltaTime;
-        }
+        _currentState.UpdateState();
     }
 
     public void SwitchStates(Perspective switchToPerspective)
     {
         PlayerBaseState newState;
 
-        switch (switchToPerspective.perspectiveEnum)
+        switch (switchToPerspective.PerspectiveEnum)
+        {
+            case (PerspectiveEnum.FRONT):
+                newState = _frontViewState;
+                break;
+            case (PerspectiveEnum.SIDE):
+                newState = _sideViewState;
+                break;
+            case (PerspectiveEnum.TOP):
+                newState = _topViewState;
+                break;
+            default:
+                newState = _currentState;
+                Debug.LogError("Perspective not recognized by " +
+                    "PlayerStateMachine.SwitchStates().");
+                break;
+        }
+
+        _currentState.ExitState();
+        _currentState = newState;
+        _currentState.EnterState();
+    }
+
+    public void SwitchStates(PerspectiveEnum switchToPerspective)
+    {
+        PlayerBaseState newState;
+
+        switch (switchToPerspective)
         {
             case (PerspectiveEnum.FRONT):
                 newState = _frontViewState;
@@ -69,7 +93,6 @@ public class PlayerStateMachine : MonoBehaviour
 
     public void OnClickGameWorld()
     {
-        Debug.Log("Called");
         _currentState.OnClickGameWorld();
     }
 }
