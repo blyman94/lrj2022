@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="393869f9-e6f3-45fc-bbc1-2a6432afb73d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LRJ2022Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LRJ2022Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Topdown.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Topdown.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayerBaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayerBaseState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDown/RailgunControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDown/RailgunControl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +77,7 @@
       <updated>1659756719391</updated>
       <workItem from="1659756812982" duration="7905000" />
       <workItem from="1659800300090" duration="4646000" />
+      <workItem from="1659835052897" duration="1116000" />
     </task>
     <servers />
   </component>
