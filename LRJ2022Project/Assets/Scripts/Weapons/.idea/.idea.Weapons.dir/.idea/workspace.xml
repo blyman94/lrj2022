@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1befb0-ec1d-4b2b-a9d4-c87d4806383a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../StateMachine/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../StateMachine/PlayerStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Control/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Control/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StateMachine/States/PlayerSideViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../StateMachine/States/PlayerSideViewState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Weapons.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Weapons.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WeaponData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ProjectSettings/TimelineSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +54,7 @@
       <updated>1659660918862</updated>
       <workItem from="1659660924588" duration="2444000" />
       <workItem from="1659809992643" duration="635000" />
-      <workItem from="1659879451566" duration="10004000" />
+      <workItem from="1659879451566" duration="17296000" />
     </task>
     <servers />
   </component>
