@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
+    [Header("Component References")]
+    public GameObject BombCrosshairObject;
+
     [Header("Game Events")]
     public GameEvent SwitchToFrontViewEvent;
     public GameEvent SwitchToSideViewEvent;
@@ -9,6 +12,9 @@ public class PlayerStateMachine : MonoBehaviour
 
     [Header("State Data")]
     public float BombCooldownTimer;
+
+    [Header("Prefabs")]
+    public GameObject BombProjectilePrefab;
 
     private PlayerBaseState _currentState;
 
@@ -91,8 +97,40 @@ public class PlayerStateMachine : MonoBehaviour
         _currentState.EnterState();
     }
 
+    public void SwitchStates(PerspectiveEnum switchToPerspective)
+    {
+        PlayerBaseState newState;
+
+        switch (switchToPerspective)
+        {
+            case (PerspectiveEnum.FRONT):
+                newState = _frontViewState;
+                break;
+            case (PerspectiveEnum.SIDE):
+                newState = _sideViewState;
+                break;
+            case (PerspectiveEnum.TOP):
+                newState = _topViewState;
+                break;
+            default:
+                newState = _currentState;
+                Debug.LogError("Perspective not recognized by " +
+                    "PlayerStateMachine.SwitchStates().");
+                break;
+        }
+
+        _currentState.ExitState();
+        _currentState = newState;
+        _currentState.EnterState();
+    }
+
     public void OnClickGameWorld()
     {
         _currentState.OnClickGameWorld();
+    }
+
+    public void SpawnBombAtPosition(Vector3 spawnPos)
+    {
+        Instantiate(BombProjectilePrefab, spawnPos, Quaternion.identity);
     }
 }
