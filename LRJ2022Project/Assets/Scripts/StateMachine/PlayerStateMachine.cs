@@ -39,6 +39,12 @@ public class PlayerStateMachine : MonoBehaviour
 
     public void SwitchStates(Perspective switchToPerspective)
     {
+        // Return out of the switch state call is to the same state.
+        if (_currentState.Perspective == switchToPerspective.PerspectiveEnum)
+        {
+            return;
+        }
+
         PlayerBaseState newState;
 
         switch (switchToPerspective.PerspectiveEnum)
@@ -66,6 +72,12 @@ public class PlayerStateMachine : MonoBehaviour
 
     public void SwitchStates(PerspectiveEnum switchToPerspective)
     {
+        // Return out of the switch state call is to the same state.
+        if (_currentState.Perspective == switchToPerspective)
+        {
+            return;
+        }
+
         PlayerBaseState newState;
 
         switch (switchToPerspective)

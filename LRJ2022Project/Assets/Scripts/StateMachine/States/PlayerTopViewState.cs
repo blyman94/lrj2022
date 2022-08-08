@@ -3,6 +3,7 @@ public class PlayerTopViewState : PlayerBaseState
     public PlayerTopViewState(PlayerStateMachine context)
     {
         Context = context;
+        Perspective = PerspectiveEnum.TOP;
     }
 
     public override void EnterState()

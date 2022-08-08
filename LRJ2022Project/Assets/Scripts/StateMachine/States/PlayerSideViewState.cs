@@ -4,6 +4,7 @@ public class PlayerSideViewState : PlayerBaseState
     public PlayerSideViewState(PlayerStateMachine context)
     {
         Context = context;
+        Perspective = PerspectiveEnum.SIDE;
     }
 
     public override void EnterState()
