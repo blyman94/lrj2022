@@ -13,10 +13,13 @@ public class PlayerStateMachine : MonoBehaviour
     public LayerMask Mask;
     public GameObject FpsCrossHair;
     public List<WeaponData> Weapons;
-    
+
 
     [Header("State Data")]
-    public float BombCooldownTimer;
+    public float BombCooldownTime;
+    public bool IsFirstBomb { get; set; } = true;
+    public GameObject BombCrosshairObject;
+    public GameObject BombProjectilePrefab;
     private PlayerBaseState _currentState;
 
     // States
@@ -49,6 +52,7 @@ public class PlayerStateMachine : MonoBehaviour
         // Return out of the switch state call is to the same state.
         if (_currentState.Perspective == switchToPerspective.PerspectiveEnum)
         {
+            Debug.Log("Called Same State A");
             return;
         }
 
@@ -75,6 +79,7 @@ public class PlayerStateMachine : MonoBehaviour
         _currentState.ExitState();
         _currentState = newState;
         _currentState.EnterState();
+        Debug.Log(_currentState.Perspective.ToString());
     }
 
     public void SwitchStates(PerspectiveEnum switchToPerspective)
@@ -108,10 +113,16 @@ public class PlayerStateMachine : MonoBehaviour
         _currentState.ExitState();
         _currentState = newState;
         _currentState.EnterState();
+        Debug.Log(_currentState.Perspective.ToString());
     }
 
     public void OnClickGameWorld()
     {
         _currentState.OnClickGameWorld();
+    }
+
+    public void SpawnBombAtPosition(Vector3 spawnPos)
+    {
+        Instantiate(BombProjectilePrefab, spawnPos, Quaternion.identity);
     }
 }

@@ -50,7 +50,7 @@ MonoBehaviour:
   bombDamage: 3
   canDamageLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   explosionRadius: 8
   explosionPrefab: {fileID: 8979585918745600921, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
   _dropAcceleration: 10

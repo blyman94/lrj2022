@@ -11,13 +11,14 @@ public class PlayerSideViewState : PlayerBaseState
 
     public PlayerSideViewState(PlayerStateMachine context)
     {
+        Perspective = PerspectiveEnum.SIDE;
         Context = context;
-        reloadTime = GetWeapon().weaponCooldown;
     }
 
     public override void EnterState()
     {
         Context.SwitchToSideViewEvent.Raise();
+        reloadTime = GetWeapon().weaponCooldown;
     }
 
     public override void ExitState()
@@ -49,16 +50,16 @@ public class PlayerSideViewState : PlayerBaseState
 
     private WeaponData GetWeapon()
     {
-        if (weaponIdx >= Context.weapons.Count)
+        if (weaponIdx >= Context.Weapons.Count)
         {
             Debug.Log("Index Exceeds Weapons List Length");
         }
-        return Context.weapons[weaponIdx];
+        return Context.Weapons[weaponIdx];
     }
 
     private GameObject GetCrossHair()
     {
-        return Context.fpsCrossHair;
+        return Context.FpsCrossHair;
     }
 
     private void EnemyDetection(GameObject target)
