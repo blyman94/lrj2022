@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8dca73f4efca441ac9c41aff8ff2bf, type: 3}
   m_Name: SimplePistol
   m_EditorClassIdentifier: 
-  weaponName: 
-  bulletCapacity: 0
-  weaponCooldown: 0
-  weaponReloadTime: 0
+  weaponName: Pistol
+  bulletCapacity: 5
+  remainingBullets: 2
+  weaponCooldown: 0.3
+  weaponReloadTime: 1
+  weaponRange: 64
+  bulletDamage: 1
