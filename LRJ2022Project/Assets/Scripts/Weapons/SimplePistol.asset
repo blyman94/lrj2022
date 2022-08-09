@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8dca73f4efca441ac9c41aff8ff2bf, type: 3}
   m_Name: SimplePistol
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   weaponName: Pistol
   bulletCapacity: 5
   remainingBullets: 2
@@ -20,11 +19,3 @@ MonoBehaviour:
   weaponReloadTime: 1
   weaponRange: 64
   bulletDamage: 1
-=======
-  remainingBullets: 17
-  weaponName: Glock
-  bulletCapacity: 17
-  weaponCooldown: 0.5
-  weaponReloadTime: 3
-  weaponRange: 64
->>>>>>> Stashed changes

@@ -637,16 +637,11 @@ MonoBehaviour:
   SwitchToFrontViewEvent: {fileID: 11400000, guid: 96e89c170f4d8644cb8c38e71d98fa33, type: 2}
   SwitchToSideViewEvent: {fileID: 11400000, guid: 7e5af107d03745546baa3f721af07a32, type: 2}
   SwitchToTopViewEvent: {fileID: 11400000, guid: bc7fb624901bf86478ca0889293b0a79, type: 2}
-<<<<<<< Updated upstream
   Mask:
     serializedVersion: 2
     m_Bits: 192
   FpsCrossHair: {fileID: 571366959}
   Weapons:
-=======
-  fpsCrossHair: {fileID: 2219291291169902382}
-  weapons:
->>>>>>> Stashed changes
   - {fileID: 11400000, guid: 0ae474f2973fc434d8482a15a5308059, type: 2}
   BombCooldownTimer: 5
 --- !u!4 &232494957
@@ -1298,13 +1293,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1265674047}
-<<<<<<< Updated upstream
   - {fileID: 571366960}
-=======
-  - {fileID: 918748434}
-  - {fileID: 311975274}
-  - {fileID: 493538258253286604}
->>>>>>> Stashed changes
   m_Father: {fileID: 2049768806}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1923,7 +1912,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cc5cbf55-e862-4d44-a9fe-fb720ecf3f7b
     m_ActionName: Main/LeftClick[/Mouse/leftButton]
-<<<<<<< Updated upstream
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 947159240}
@@ -1972,8 +1960,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 42db3cab-417b-482b-92e2-968ea0605996
     m_ActionName: Main/SwitchToTopView[/Keyboard/w,/Keyboard/upArrow]
-=======
->>>>>>> Stashed changes
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -2369,13 +2355,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439018256}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1439018260
 MonoBehaviour:
@@ -3404,7 +3390,7 @@ RectTransform:
   - {fileID: 652684050}
   - {fileID: 47948679}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3583,59 +3569,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
 --- !u!114 &1916747436418289124
-=======
---- !u!224 &493538258253286604
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2219291291169902382}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 652684050}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 32, y: 32}
-  m_SizeDelta: {x: 4, y: 4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2219291291169902382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 493538258253286604}
-  - component: {fileID: 2219291291169902384}
-  - component: {fileID: 2219291291169902383}
-  m_Layer: 5
-  m_Name: CrossHair
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2219291291169902383
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 571366959}
-=======
-  m_GameObject: {fileID: 2219291291169902382}
->>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -3655,22 +3595,7 @@ MonoBehaviour:
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
-<<<<<<< Updated upstream
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-=======
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2219291291169902384
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2219291291169902382}
-  m_CullTransparentMesh: 1
->>>>>>> Stashed changes
