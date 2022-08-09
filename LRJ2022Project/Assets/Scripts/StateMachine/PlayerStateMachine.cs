@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
+    [Header("Component References")]
+    public GameObject BombCrosshairObject;
+
     [Header("Game Events")]
     public GameEvent SwitchToFrontViewEvent;
     public GameEvent SwitchToSideViewEvent;
     public GameEvent SwitchToTopViewEvent;
 
     [Header("State Data")]
-    public float BombCooldownTimer;
+    public float BombCooldownTime;
+
+    [Header("Prefabs")]
+    public GameObject BombProjectilePrefab;
 
     private PlayerBaseState _currentState;
 
@@ -17,6 +23,7 @@ public class PlayerStateMachine : MonoBehaviour
     private PlayerSideViewState _sideViewState;
     private PlayerTopViewState _topViewState;
 
+    public bool IsFirstBomb { get; set; } = true;
     public Vector2 MousePosition { get; set; }
 
     private void Awake()
@@ -106,5 +113,10 @@ public class PlayerStateMachine : MonoBehaviour
     public void OnClickGameWorld()
     {
         _currentState.OnClickGameWorld();
+    }
+
+    public void SpawnBombAtPosition(Vector3 spawnPos)
+    {
+        Instantiate(BombProjectilePrefab, spawnPos, Quaternion.identity);
     }
 }

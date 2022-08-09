@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5347d4db62875a4094f77179b33438d, type: 3}
   m_Name: Side
   m_EditorClassIdentifier: 
-  perspectiveEnum: 1
+  PerspectiveEnum: 1
