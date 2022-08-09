@@ -1,21 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
-    [Header("Component References")]
-    public GameObject BombCrosshairObject;
-
     [Header("Game Events")]
     public GameEvent SwitchToFrontViewEvent;
     public GameEvent SwitchToSideViewEvent;
     public GameEvent SwitchToTopViewEvent;
 
+    [Header("Side View State Data")]
+    public LayerMask Mask;
+    public GameObject FpsCrossHair;
+    public List<WeaponData> Weapons;
+    
+
     [Header("State Data")]
-    public float BombCooldownTime;
-
-    [Header("Prefabs")]
-    public GameObject BombProjectilePrefab;
-
+    public float BombCooldownTimer;
     private PlayerBaseState _currentState;
 
     // States
@@ -23,7 +24,6 @@ public class PlayerStateMachine : MonoBehaviour
     private PlayerSideViewState _sideViewState;
     private PlayerTopViewState _topViewState;
 
-    public bool IsFirstBomb { get; set; } = true;
     public Vector2 MousePosition { get; set; }
 
     private void Awake()
@@ -113,10 +113,5 @@ public class PlayerStateMachine : MonoBehaviour
     public void OnClickGameWorld()
     {
         _currentState.OnClickGameWorld();
-    }
-
-    public void SpawnBombAtPosition(Vector3 spawnPos)
-    {
-        Instantiate(BombProjectilePrefab, spawnPos, Quaternion.identity);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private PlayerStateMachine playerStateMachine;
+    [SerializeField] public PlayerStateMachine playerStateMachine;
 
     public void OnMouseMove(InputAction.CallbackContext context)
     {
