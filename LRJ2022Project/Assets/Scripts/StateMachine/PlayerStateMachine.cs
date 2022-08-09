@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
@@ -7,9 +9,14 @@ public class PlayerStateMachine : MonoBehaviour
     public GameEvent SwitchToSideViewEvent;
     public GameEvent SwitchToTopViewEvent;
 
+    [Header("Side View State Data")]
+    public LayerMask Mask;
+    public GameObject FpsCrossHair;
+    public List<WeaponData> Weapons;
+    
+
     [Header("State Data")]
     public float BombCooldownTimer;
-
     private PlayerBaseState _currentState;
 
     // States
@@ -34,17 +41,53 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void Update()
     {
-        if (BombCooldownTimer >= 0)
-        {
-            BombCooldownTimer -= Time.deltaTime;
-        }
+        _currentState.UpdateState();
     }
 
     public void SwitchStates(Perspective switchToPerspective)
     {
+        // Return out of the switch state call is to the same state.
+        if (_currentState.Perspective == switchToPerspective.PerspectiveEnum)
+        {
+            return;
+        }
+
         PlayerBaseState newState;
 
-        switch (switchToPerspective.perspectiveEnum)
+        switch (switchToPerspective.PerspectiveEnum)
+        {
+            case (PerspectiveEnum.FRONT):
+                newState = _frontViewState;
+                break;
+            case (PerspectiveEnum.SIDE):
+                newState = _sideViewState;
+                break;
+            case (PerspectiveEnum.TOP):
+                newState = _topViewState;
+                break;
+            default:
+                newState = _currentState;
+                Debug.LogError("Perspective not recognized by " +
+                    "PlayerStateMachine.SwitchStates().");
+                break;
+        }
+
+        _currentState.ExitState();
+        _currentState = newState;
+        _currentState.EnterState();
+    }
+
+    public void SwitchStates(PerspectiveEnum switchToPerspective)
+    {
+        // Return out of the switch state call is to the same state.
+        if (_currentState.Perspective == switchToPerspective)
+        {
+            return;
+        }
+
+        PlayerBaseState newState;
+
+        switch (switchToPerspective)
         {
             case (PerspectiveEnum.FRONT):
                 newState = _frontViewState;
@@ -69,7 +112,6 @@ public class PlayerStateMachine : MonoBehaviour
 
     public void OnClickGameWorld()
     {
-        Debug.Log("Called");
         _currentState.OnClickGameWorld();
     }
 }

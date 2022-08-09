@@ -3,6 +3,7 @@ public class PlayerFrontViewState : PlayerBaseState
     public PlayerFrontViewState(PlayerStateMachine context)
     {
         Context = context;
+        Perspective = PerspectiveEnum.FRONT;
     }
 
     public override void EnterState()
@@ -16,6 +17,11 @@ public class PlayerFrontViewState : PlayerBaseState
     }
 
     public override void OnClickGameWorld()
+    {
+        
+    }
+
+    public override void UpdateState()
     {
         
     }
