@@ -40,7 +40,7 @@ public class PlayerTopViewState : PlayerBaseState
     public override void UpdateState()
     {
         Context.BombCrosshairObject.transform.position =
-            new Vector3(Context.MousePosition.x, 1.0f, Context.MousePosition.y);
+            new Vector3(Context.MousePosition.x, 15.0f, Context.MousePosition.y);
 
         if (_bombCooldownTimer > 0)
         {

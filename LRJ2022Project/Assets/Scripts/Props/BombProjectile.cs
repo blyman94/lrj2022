@@ -27,7 +27,7 @@ public class BombProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Vector3 explosionCenter = new Vector3(transform.position.x, 0, transform.position.z);
+        Vector3 explosionCenter = new Vector3(transform.position.x, 14, transform.position.z);
 
         Collider[] collidersInRange = Physics.OverlapBox(explosionCenter,
             (Vector3.one * explosionRadius), Quaternion.identity,
