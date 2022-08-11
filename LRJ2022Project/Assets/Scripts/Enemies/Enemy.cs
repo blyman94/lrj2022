@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     {
         transform.Translate(0, 0, -EnemyData.MoveSpeed * Time.deltaTime);
     }
-
+    
     public void TakeDamage(int damageToTake)
     {
         CurrentHealth = CurrentHealth - damageToTake;
