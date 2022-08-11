@@ -8,17 +8,21 @@ public class PlayerSideViewState : PlayerBaseState
 {
     private int weaponIdx = 0;
     private float reloadTime;
+    private bool isReloading = false;
 
     public PlayerSideViewState(PlayerStateMachine context)
     {
-        Perspective = PerspectiveEnum.SIDE;
         Context = context;
+        Perspective = PerspectiveEnum.SIDE;
+        isReloading = true;
+        reloadTime = GetWeapon().weaponReloadTime;
+        GetWeapon().Init();
     }
 
     public override void EnterState()
     {
         Context.SwitchToSideViewEvent.Raise();
-        reloadTime = GetWeapon().weaponCooldown;
+        GetCrossHair().transform.position = new Vector3(32, 32, 0);
     }
 
     public override void ExitState()
@@ -30,17 +34,36 @@ public class PlayerSideViewState : PlayerBaseState
     {
         if (reloadTime <= 0)
         {
-            reloadTime = GetWeapon().weaponCooldown;
-            WeaponData currentWeapon = GetWeapon();
-            Vector2 mousePosition = GetMousePosition();
-            Ray ray = Camera.main.ViewportPointToRay(new Vector3(mousePosition.x / 64, mousePosition.y / 64, 0.0f));
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 1000))
+            if (GetWeapon().OutOfBullets())
             {
-                Debug.Log("Bullet Fired");
-                EnemyDetection(hit.transform.gameObject);
+                ReloadWeapon();
+            } else {
+                FireWeapon();
             }
         }
+    }
+    
+    private void FireWeapon()
+    {
+        WeaponData currentWeapon = GetWeapon();
+        currentWeapon.Fire();
+        Vector2 mousePosition = GetMousePosition();
+        Vector3 origin = new Vector3(64, mousePosition.y, mousePosition.x);
+        RaycastHit hit;
+        if (Physics.Raycast(origin, Vector3.left, out hit, currentWeapon.weaponRange, Context.Mask))
+        {
+            Debug.Log("Hit Something");
+            EnemyDetection(hit.transform.gameObject);
+        }
+        reloadTime = currentWeapon.weaponCooldown; 
+    }
+
+    private void ReloadWeapon()
+    {
+        WeaponData currentWeapon = GetWeapon();
+        reloadTime = currentWeapon.weaponReloadTime;
+        currentWeapon.Reload();
+        isReloading = true;
     }
 
     private Vector2 GetMousePosition()
@@ -67,18 +90,51 @@ public class PlayerSideViewState : PlayerBaseState
         if (target.CompareTag("Enemy"))
         {
             Debug.Log("Enemy Hit");
+            target.GetComponent<Enemy>().TakeDamage(GetWeapon().bulletDamage);
         }
     }
 
-    public override void UpdateState()
+    private void OnFrameFillCrossHairReload(float time)
+    {
+        GetCrossHair().GetComponent<Image>().fillAmount = 1 - Math.Max(reloadTime, 0) / time;
+    }
+
+    private void OnFrameFollowMouse()
+    {
+        Vector2 mousePosition = GetMousePosition();
+        GetCrossHair().transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+    }
+
+    private void OnFrameResetReload()
     {
         if (reloadTime > 0)
         {
             reloadTime -= Time.deltaTime;
         }
-        Vector2 mousePosition = GetMousePosition();
-        // Debug.Log(new Vector2(mousePosition.x / 64, mousePosition.y / 64));
-        GetCrossHair().transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
-        GetCrossHair().GetComponent<Image>().fillAmount = 1 - Math.Max(reloadTime, 0) / GetWeapon().weaponCooldown;
+        else
+        {
+            reloadTime = 0;
+            isReloading = false;
+        }
+    }
+
+    public override void UpdateState()
+    {
+        OnFrameResetReload();
+        OnFrameFollowMouse();
+        if (isReloading)
+        {
+            OnFrameFillCrossHairReload(GetWeapon().weaponReloadTime);
+        }
+        else
+        {
+            OnFrameFillCrossHairReload(GetWeapon().weaponCooldown);
+        }
+        
+        // Reload Button
+        /*if (Input.GetKeyDown("R") && !isReloading)
+        {
+            ReloadWeapon();
+        }*/
     }
 }
