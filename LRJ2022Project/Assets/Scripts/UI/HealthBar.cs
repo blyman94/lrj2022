@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
 
     private void OnEnable()
     {
-        _observedEnemy.HealthChanged += UpdateHealthBar;
+        _observedEnemy.Damaged += UpdateHealthBar;
     }
 
     private void Start()
@@ -22,7 +22,7 @@ public class HealthBar : MonoBehaviour
 
     private void OnDisable()
     {
-        _observedEnemy.HealthChanged -= UpdateHealthBar;
+        _observedEnemy.Damaged -= UpdateHealthBar;
     }
 
     private void UpdateHealthBar()

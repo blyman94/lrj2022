@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void HealthChanged();
-public delegate void Died();
+public delegate void EnemyDamaged();
+public delegate void EnemyDied();
 
 public class Enemy : MonoBehaviour
 {
-    public HealthChanged HealthChanged;
-    public Died Died;
-    
+    public EnemyDamaged Damaged;
+    public EnemyDied Died;
+
     public EnemyData EnemyData;
+    public GameEvent EnemyDamagedEvent;
+    public GameEvent EnemyDiedEvent;
 
     public float CurrentHealth { get; set; }
 
@@ -33,10 +35,12 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damageToTake)
     {
         CurrentHealth = CurrentHealth - damageToTake;
-        HealthChanged?.Invoke();
+        Damaged?.Invoke();
+        EnemyDamagedEvent.Raise();
         if (CurrentHealth <= 0)
         {
             Died?.Invoke();
+            EnemyDiedEvent.Raise();
         }
     }
 
