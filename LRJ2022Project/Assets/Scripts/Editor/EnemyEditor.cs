@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(Enemy))]
+//[CustomEditor(typeof(Enemy))]
 [CanEditMultipleObjects]
 public class EnemyEditor : Editor
 {

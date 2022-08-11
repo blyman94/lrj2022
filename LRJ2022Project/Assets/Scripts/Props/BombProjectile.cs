@@ -6,7 +6,7 @@ public class BombProjectile : MonoBehaviour
 {
     [SerializeField] private int bombDamage;
     [SerializeField] private LayerMask canDamageLayer;
-    [SerializeField] private int explosionRadius = 8;
+    [SerializeField] private int explosionRadius = 16;
     [SerializeField] private GameObject explosionPrefab;
 
     [Range(0, 25)]

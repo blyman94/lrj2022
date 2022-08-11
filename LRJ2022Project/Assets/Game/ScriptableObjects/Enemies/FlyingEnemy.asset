@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d178362d1789a479cdc03d5e09d6ce, type: 3}
+  m_Name: FlyingEnemy
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+  Damage: 1
+  MoveSpeed: 1
+  MoveHeight: 44
+  IsFlying: 1
+  IsArmored: 0
+  WeakToPerspective: {fileID: 11400000, guid: 62b3df5668a8e5c44a84cc16c03ace68, type: 2}

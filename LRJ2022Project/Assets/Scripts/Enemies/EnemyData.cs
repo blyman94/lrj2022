@@ -11,5 +11,5 @@ public class EnemyData : ScriptableObject
     public float MoveHeight;
     public bool IsFlying;
     public bool IsArmored;
-    public Perspective CanAttackPerspective;
+    public Perspective WeakToPerspective;
 }
