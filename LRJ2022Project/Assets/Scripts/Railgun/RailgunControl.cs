@@ -8,14 +8,20 @@ public class RailgunControl : MonoBehaviour
     [SerializeField] private IntVariable railgunLane;
 
     [SerializeField] private int damage;
+
+    [SerializeField] private BoolVariable usePhysicalBullet;
     
    public void TryFire()
    {
+       if (usePhysicalBullet.Value)
+       {
+           return;
+       }
        Debug.Log("Fired");
        RaycastHit[] hitInfo = Physics.BoxCastAll(lanePositions[railgunLane.Value],
            new Vector3(8, 32, 32), Vector3.forward);
 
-        if(hitInfo.Length > 0 ){
+        if(hitInfo.Length > 0){
             foreach(RaycastHit hit in hitInfo)
             {
                 if (hit.collider != null && hit.collider.gameObject.GetComponent<Enemy>() != null)

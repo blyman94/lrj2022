@@ -10,9 +10,9 @@ public class Enemy : MonoBehaviour
     public EnemyDamaged Damaged;
     public EnemyDied Died;
 
-    public EnemyData EnemyData;
-    public GameEvent EnemyDamagedEvent;
-    public GameEvent EnemyDiedEvent;
+    public EnemyData EnemyData; 
+    [SerializeField] private GameEvent EnemyDamagedEvent;
+    [SerializeField] private GameEvent EnemyDiedEvent;
 
     public float CurrentHealth { get; set; }
 
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     {
         transform.Translate(0, 0, -EnemyData.MoveSpeed * Time.deltaTime);
     }
-
+    
     public void TakeDamage(int damageToTake)
     {
         CurrentHealth = CurrentHealth - damageToTake;
@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
         {
             Died?.Invoke();
             EnemyDiedEvent.Raise();
+            Destroy(gameObject);
         }
     }
 

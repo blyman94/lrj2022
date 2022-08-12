@@ -6,28 +6,25 @@ using UnityEngine.UI;
 public class FireControl : MonoBehaviour
 {
     [SerializeField] private BoolVariable cooldownStart;
-    [SerializeField] List<Button> fireButtons;
+    [SerializeField] Button aimingButton;
 
     private void Start()
     {
-        SwitchButtons();
+        EnableScreen();
     }
     
     private void OnEnable()
     {
-        cooldownStart.VariableUpdated += SwitchButtons;
+        cooldownStart.VariableUpdated += EnableScreen;
     }
 
     private void OnDisable()
     {
-        cooldownStart.VariableUpdated -= SwitchButtons;
+        cooldownStart.VariableUpdated -= EnableScreen;
     }
 
-    private void SwitchButtons()
+    private void EnableScreen()
     {
-        foreach (Button button in fireButtons)
-        {
-            button.interactable = cooldownStart.Value;
-        }
+        aimingButton.interactable = cooldownStart.Value;
     }
 }

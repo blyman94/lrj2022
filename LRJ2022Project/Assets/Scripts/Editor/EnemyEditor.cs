@@ -6,10 +6,16 @@ using UnityEditor;
 public class EnemyEditor : Editor
 {
     private SerializedProperty enemyDataProperty;
+    private SerializedProperty onDamageEvent;
+    private SerializedProperty onDeathEvent;
 
     private void OnEnable()
     {
         enemyDataProperty = serializedObject.FindProperty("EnemyData");
+        onDamageEvent = serializedObject.FindProperty("EnemyDamagedEvent");
+
+        onDeathEvent = serializedObject.FindProperty("EnemyDiedEvent");
+
     }
 
     public override void OnInspectorGUI()
@@ -23,6 +29,11 @@ public class EnemyEditor : Editor
             GetType(), false);
 
         EditorGUILayout.PropertyField(enemyDataProperty);
+        
+        EditorGUILayout.PropertyField(onDamageEvent);
+        EditorGUILayout.PropertyField(onDeathEvent);
+
+
 
         if (GUILayout.Button("Take Damage"))
         {
