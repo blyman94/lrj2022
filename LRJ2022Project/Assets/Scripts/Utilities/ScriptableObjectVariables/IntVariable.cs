@@ -9,5 +9,15 @@ using UnityEngine;
     fileName = "NewIntVariable")]
 public class IntVariable : ScriptableObjectVariable<int>
 {
+
+    public void Increment()
+    {
+        Value += 1;
+    }
+    
+    public void Decrement()
+    {
+        Value -= 1;
+    }
     
 }

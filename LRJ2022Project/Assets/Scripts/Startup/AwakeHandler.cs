@@ -8,7 +8,8 @@ public class AwakeHandler : MonoBehaviour
 {
 
     [SerializeField] private UnityEvent onAwake;
-    private void Awake()
+    
+    private void Start()
     {
         onAwake?.Invoke();
     }

@@ -1,38 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private List<EnemyWaveData> Waves;
 
-    [SerializeField] private IntVariable WaveIndex;
-
-    [SerializeField] private BoolVariable WaveStarted;
-
-    [SerializeField] private IntVariable EnemiesToKill;
-
-    [SerializeField] private GameEvent onWaveEnd;
-    
-    
-    public void StartWave()
+    [SerializeField] private float timeBetweenSpawns;
+    [SerializeField] private Vector3ListVariable lanes;
+    //Potential Deflection [SerializeField] private EnemyWaveData currentWave;
+    public void SpawnEnemies(List<GameObject> enemies)
     {
-        if (WaveIndex.Value > Waves.Count)
+        StartCoroutine(EnemyGenerate( enemies));
+    }
+
+    IEnumerator EnemyGenerate(List<GameObject> enemies)
+    {
+        foreach (int i in Enumerable.Range(0, enemies.Count).OrderBy(x => Random.value))
         {
-            Debug.LogError("Invalid Wave Count");
-            return;
+            Instantiate(enemies[i],
+                lanes.Lanes[Random.Range(0, lanes.Lanes.Count)],
+                Quaternion.identity);
+            yield return new WaitForSeconds(timeBetweenSpawns);
         }
-    }
-
-    private void RaiseDied()
-    {
-        
-    }
-    public void SpawnEnemies()
-    {
-       foreach(GameObject enemy in Waves[WaveIndex.Value].enemyData)
-       {
-      
-       }
     }
 }

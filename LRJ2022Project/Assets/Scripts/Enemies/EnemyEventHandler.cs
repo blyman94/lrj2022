@@ -11,17 +11,7 @@ public class EnemyEventHandler : MonoBehaviour
     [SerializeField] GameEvent onDamage;
     [SerializeField] GameEvent onDeath;
 
-    private void OnEnable()
-    {
-        _observedEnemy.HealthChanged += OnDamage;
-        _observedEnemy.Died += OnDeath;
-    }
-
-    private void OnDisable()
-    {
-        _observedEnemy.HealthChanged -= OnDamage;
-        _observedEnemy.Died += OnDeath;
-    }
+  
 
     private void OnDamage()
     {
