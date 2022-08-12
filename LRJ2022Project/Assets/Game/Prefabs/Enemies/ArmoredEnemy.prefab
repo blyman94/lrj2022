@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6803888492302064700}
-  - component: {fileID: 6803888492302064702}
   - component: {fileID: 6803888492302064703}
   m_Layer: 0
   m_Name: EnemyFront
@@ -33,21 +32,6 @@ Transform:
   m_Father: {fileID: 6803888494104083397}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6803888492302064702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6803888492302064701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ae374bccd69a84694903fbb0d48a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 6803888492302064703}
-  _distanceFrom: {fileID: 11400000, guid: c3cf2bca0fa3a6f49886a10a9dc800b1, type: 2}
-  distanceAxis: 2
 --- !u!212 &6803888492302064703
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -242,7 +226,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6803888492662236152}
   - component: {fileID: 6803888492662236155}
-  - component: {fileID: 6803888492662236154}
   m_Layer: 0
   m_Name: HealthBarSide
   m_TagString: Untagged
@@ -317,21 +300,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6803888492662236154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6803888492662236153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ae374bccd69a84694903fbb0d48a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 6803888492662236155}
-  _distanceFrom: {fileID: 11400000, guid: 9a8a1c054b545fe46ae5f705e4fa6122, type: 2}
-  distanceAxis: 0
 --- !u!1 &6803888492901444016
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +309,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6803888492901444019}
-  - component: {fileID: 6803888492901444029}
   - component: {fileID: 6803888492901444018}
   m_Layer: 0
   m_Name: EnemySide
@@ -365,21 +332,6 @@ Transform:
   m_Father: {fileID: 6803888494104083397}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &6803888492901444029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6803888492901444016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ae374bccd69a84694903fbb0d48a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 6803888492901444018}
-  _distanceFrom: {fileID: 11400000, guid: 9a8a1c054b545fe46ae5f705e4fa6122, type: 2}
-  distanceAxis: 0
 --- !u!212 &6803888492901444018
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -643,7 +595,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6803888494311292773}
-  - component: {fileID: 6803888494311292775}
   - component: {fileID: 6803888494311292772}
   m_Layer: 0
   m_Name: HealthBarFront
@@ -667,21 +618,6 @@ Transform:
   m_Father: {fileID: 6803888492383886191}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6803888494311292775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6803888494311292794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ae374bccd69a84694903fbb0d48a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 6803888494311292772}
-  _distanceFrom: {fileID: 11400000, guid: c3cf2bca0fa3a6f49886a10a9dc800b1, type: 2}
-  distanceAxis: 2
 --- !u!212 &6803888494311292772
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -127,7 +127,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4095410514657441459}
-  - component: {fileID: 4095410514657441457}
   - component: {fileID: 4095410514657441456}
   m_Layer: 0
   m_Name: BombGraphicsTop
@@ -151,21 +150,6 @@ Transform:
   m_Father: {fileID: 4095410514552132426}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
---- !u!114 &4095410514657441457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4095410514657441458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ae374bccd69a84694903fbb0d48a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 4095410514657441456}
-  _distanceFrom: {fileID: 11400000, guid: e4c51ae6a71d37d4d99fe99cd154fabc, type: 2}
-  distanceAxis: 1
 --- !u!212 &4095410514657441456
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -227,7 +211,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4095410514671263965}
-  - component: {fileID: 4095410514671263963}
   - component: {fileID: 4095410514671263962}
   m_Layer: 0
   m_Name: BombGraphicsFront
@@ -251,21 +234,6 @@ Transform:
   m_Father: {fileID: 4095410514552132426}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4095410514671263963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4095410514671263964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ae374bccd69a84694903fbb0d48a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 4095410514671263962}
-  _distanceFrom: {fileID: 11400000, guid: 9a8a1c054b545fe46ae5f705e4fa6122, type: 2}
-  distanceAxis: 0
 --- !u!212 &4095410514671263962
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -327,7 +295,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8109952054050387766}
-  - component: {fileID: 1817832170664360948}
   - component: {fileID: 5446252285182513434}
   m_Layer: 0
   m_Name: BombGraphicsSide
@@ -351,21 +318,6 @@ Transform:
   m_Father: {fileID: 4095410514552132426}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1817832170664360948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8141064674272372734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ae374bccd69a84694903fbb0d48a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 5446252285182513434}
-  _distanceFrom: {fileID: 11400000, guid: 9a8a1c054b545fe46ae5f705e4fa6122, type: 2}
-  distanceAxis: 0
 --- !u!212 &5446252285182513434
 SpriteRenderer:
   m_ObjectHideFlags: 0
