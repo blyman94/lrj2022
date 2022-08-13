@@ -6,33 +6,19 @@ public class RailgunRenderer : MonoBehaviour
 {
     [SerializeField] private IntVariable railgunLane;
 
-    [SerializeField] private int fireTime;
+    [SerializeField] private Animator railgunAnimator;
+    
 
     private Vector3 savePoint ;
+
     public void SetLane()
     {
         savePoint = transform.position;
         Debug.Log("Set Lane");
-        StartCoroutine(FireCylinder());
-    }
-
-    private IEnumerator FireCylinder()
-    {
-        transform.position = new Vector3( 16* (railgunLane.Value+1), transform.position.y, transform.position.z);
-        Vector3 startingPos  = transform.position;
-
-        Vector3 finalPos = startingPos + Vector3.forward * 128;
-        float elapsedTime = 0;
-         
-        while (elapsedTime < fireTime)
-        {
-            transform.position = Vector3.Lerp(startingPos, finalPos, (elapsedTime / fireTime));
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        transform.position = savePoint;
-
+        transform.position = new Vector3(16*(railgunLane.Value) + 8, transform.position.y,transform.position.z);
+        railgunAnimator.Play("RailgunShot");
+        
+       // transform.position = savePoint;
 
     }
 }

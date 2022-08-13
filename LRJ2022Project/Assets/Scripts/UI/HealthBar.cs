@@ -32,24 +32,24 @@ public class HealthBar : MonoBehaviour
 
         if (healthPercentage == 1)
         {
-            xScale = 8;
+            xScale = 10;
         }
         else if (healthPercentage >= 0.75 && healthPercentage < 1)
         {
-            xScale = 6;
+            xScale = 8;
         }
         else if (healthPercentage >= 0.5)
         {
-            xScale = 4;
+            xScale = 6;
         }
         else if (healthPercentage >= 0.25)
         {
-            xScale = 2;
+            xScale = 4;
         }
         else
         {
             // < 0.25
-            xScale = 0;
+            xScale = 2;
         }
 
         foreach (Transform healthBarTransform in _healthBarTransforms)
