@@ -54,6 +54,8 @@ MonoBehaviour:
   explosionRadius: 8
   explosionPrefab: {fileID: 8979585918745600921, guid: bd9644dd798dbdf4fb63f0f288c1e6ea, type: 3}
   _dropAcceleration: 10
+  BombReleased: {fileID: 11400000, guid: 1692a089945f647488e61f65d23ec568, type: 2}
+  BombExploded: {fileID: 11400000, guid: 996fb2fd2620714428c75a5175e6cf10, type: 2}
 --- !u!136 &4095410514301283129
 CapsuleCollider:
   m_ObjectHideFlags: 0

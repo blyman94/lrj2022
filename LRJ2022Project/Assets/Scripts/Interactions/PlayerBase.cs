@@ -6,6 +6,7 @@ public class PlayerBase : MonoBehaviour
 {
     public int MaxHealth = 3;
     [SerializeField] private IntVariable _health;
+    [SerializeField] private GameEvent BaseDamaged;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class PlayerBase : MonoBehaviour
 
     private void TakeDamage(int damageToTake)
     {
+        BaseDamaged.Raise();
         _health.Value = _health.Value - damageToTake;
     }
 }

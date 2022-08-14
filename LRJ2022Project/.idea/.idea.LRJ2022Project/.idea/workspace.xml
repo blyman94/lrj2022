@@ -6,12 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="393869f9-e6f3-45fc-bbc1-2a6432afb73d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LRJ2022Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LRJ2022Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Audio/FMOD Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Audio/FMOD Manager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Bomb/BombProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Bomb/BombProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Railgun/Railgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Railgun/Railgun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/ScriptableObjects/Variables/Wave One.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/ScriptableObjects/Variables/Wave One.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Spawner.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Spawner.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Railgun/RailgunRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Railgun/RailgunRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Railgun.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Railgun.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/FMODSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/FMODSound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactions/PlayerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactions/PlayerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/BombProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Props/BombProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/PlayerStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayerSideViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayerSideViewState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMOD Banks/Master.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMOD Banks/Master.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMOD Banks/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMOD Banks/Master.strings.bank" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +100,7 @@
       <workItem from="1660317080215" duration="345000" />
       <workItem from="1660326786096" duration="2543000" />
       <workItem from="1660403041354" duration="1914000" />
+      <workItem from="1660455524385" duration="2892000" />
     </task>
     <servers />
   </component>

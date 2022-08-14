@@ -37,6 +37,7 @@ public class PlayerSideViewState : PlayerBaseState
             if (GetWeapon().OutOfBullets())
             {
                 ReloadWeapon();
+                Context.WeaponReload.Raise();
             } else {
                 FireWeapon();
             }
