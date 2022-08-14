@@ -20,6 +20,11 @@ public class PlayerFrontViewState : PlayerBaseState
     {
         
     }
+    
+    public override void OnReload()
+    {
+        
+    }
 
     public override void UpdateState()
     {

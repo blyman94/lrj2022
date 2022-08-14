@@ -36,6 +36,11 @@ public class PlayerTopViewState : PlayerBaseState
             }
         }
     }
+    
+    public override void OnReload()
+    {
+        
+    }
 
     public override void UpdateState()
     {

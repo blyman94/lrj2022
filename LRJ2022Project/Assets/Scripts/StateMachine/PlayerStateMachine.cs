@@ -121,6 +121,11 @@ public class PlayerStateMachine : MonoBehaviour
         _currentState.OnClickGameWorld();
     }
 
+    public void OnReload()
+    {
+        _currentState.OnReload();
+    }
+
     public void SpawnBombAtPosition(Vector3 spawnPos)
     {
         Instantiate(BombProjectilePrefab, spawnPos, Quaternion.identity);

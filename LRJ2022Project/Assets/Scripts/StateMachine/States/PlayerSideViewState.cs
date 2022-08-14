@@ -102,7 +102,7 @@ public class PlayerSideViewState : PlayerBaseState
     private void OnFrameFollowMouse()
     {
         Vector2 mousePosition = GetMousePosition();
-        GetCrossHair().transform.position = new Vector3(mousePosition.x / 64 * 64 + 0.5f, mousePosition.y / 64 * 64 + 0.5f, 0);
+        GetCrossHair().transform.position = new Vector3(Mathf.RoundToInt(mousePosition.x), Mathf.RoundToInt(mousePosition.y), 0);
     }
 
     private void OnFrameResetReload()
@@ -115,6 +115,15 @@ public class PlayerSideViewState : PlayerBaseState
         {
             reloadTime = 0;
             isReloading = false;
+        }
+    }
+    
+    public override void OnReload()
+    {
+        Debug.Log("R Key Pressed");
+        if (!isReloading)
+        {
+            ReloadWeapon();
         }
     }
 
@@ -130,11 +139,5 @@ public class PlayerSideViewState : PlayerBaseState
         {
             OnFrameFillCrossHairReload(GetWeapon().weaponCooldown);
         }
-        
-        // Reload Button
-        /*if (Input.GetKeyDown("R") && !isReloading)
-        {
-            ReloadWeapon();
-        }*/
     }
 }

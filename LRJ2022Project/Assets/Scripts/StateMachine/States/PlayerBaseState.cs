@@ -6,5 +6,6 @@ public abstract class PlayerBaseState
     public abstract void EnterState();
     public abstract void ExitState();
     public abstract void OnClickGameWorld();
+    public abstract void OnReload();
     public abstract void UpdateState();
 }

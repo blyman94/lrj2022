@@ -43,4 +43,12 @@ public class PlayerController : MonoBehaviour
             playerStateMachine.OnClickGameWorld();
         }
     }
+
+    public void OnReloadKeyPressed(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerStateMachine.OnReload();
+        }
+    }
 }
