@@ -102,7 +102,7 @@ public class PlayerSideViewState : PlayerBaseState
     private void OnFrameFollowMouse()
     {
         Vector2 mousePosition = GetMousePosition();
-        GetCrossHair().transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+        GetCrossHair().transform.position = new Vector3(mousePosition.x / 64 * 64 + 0.5f, mousePosition.y / 64 * 64 + 0.5f, 0);
     }
 
     private void OnFrameResetReload()
