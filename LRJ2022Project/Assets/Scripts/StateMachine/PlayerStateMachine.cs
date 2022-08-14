@@ -14,6 +14,7 @@ public class PlayerStateMachine : MonoBehaviour
     public GameObject FpsCrossHair;
     public List<WeaponData> Weapons;
     public GameEvent WeaponReload;
+    public GameEvent WeaponFire;
 
 
     [Header("State Data")]
@@ -21,6 +22,9 @@ public class PlayerStateMachine : MonoBehaviour
     public bool IsFirstBomb { get; set; } = true;
     public GameObject BombCrosshairObject;
     public GameObject BombProjectilePrefab;
+    public GameEvent BombRelease;
+    public GameEvent BombReady;
+    
     private PlayerBaseState _currentState;
 
     // States
@@ -124,6 +128,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     public void SpawnBombAtPosition(Vector3 spawnPos)
     {
+        BombRelease.Raise();
         Instantiate(BombProjectilePrefab, spawnPos, Quaternion.identity);
     }
 }

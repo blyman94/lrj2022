@@ -14,13 +14,12 @@ public class BombProjectile : MonoBehaviour
 
     private float _currentSpeed = 0;
 
-    [SerializeField] private GameEvent BombReleased;
+
     [SerializeField] private GameEvent BombExploded;
 
     private void Start()
     {
         _currentSpeed = 0;
-        BombReleased.Raise();
     }
 
     private void Update()

@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1656
+--- !u!114 &-7990591913985102701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gun Fire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gun Fire
+  Guid:
+    Data1: 101066119
+    Data2: 1125512839
+    Data3: 146842763
+    Data4: -1875129429
+  Banks:
+  - {fileID: 7014880229917786984}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-7783415492316885591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,14 +300,44 @@ MonoBehaviour:
   - {fileID: 6218061097938920643}
   - {fileID: 3799082804200039159}
   - {fileID: 5826427109559382353}
+  - {fileID: 8080157637991548353}
+  - {fileID: 1045578023384418628}
+  - {fileID: -7990591913985102701}
   EditorParameters:
   - {fileID: 1621817612792219500}
   MasterBanks:
   - {fileID: 7014880229917786984}
   StringsBanks:
   - {fileID: 1767159483205964951}
-  cacheTime: 637960375691090648
+  cacheTime: 637960900266286404
   cacheVersion: 131591
+--- !u!114 &1045578023384418628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Railgun Close
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Railgun Close
+  Guid:
+    Data1: -553922184
+    Data2: 1290401914
+    Data3: 1937150887
+    Data4: 929701872
+  Banks:
+  - {fileID: 7014880229917786984}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 731
 --- !u!114 &1159044225795600895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,10 +404,10 @@ MonoBehaviour:
   Path: FMOD Banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637960375691090648
+  lastModified: 637960900266286404
   FileSizes:
   - Name: 
-    Value: 1590
+    Value: 1738
   Exists: 1
 --- !u!114 &3799082804200039159
 MonoBehaviour:
@@ -503,7 +560,7 @@ MonoBehaviour:
   Path: FMOD Banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637960375670687158
+  lastModified: 637960900225480256
   FileSizes: []
   Exists: 1
 --- !u!114 &7838583276999189796
@@ -533,6 +590,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 21577
+--- !u!114 &8080157637991548353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Railgun Open
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Railgun Open
+  Guid:
+    Data1: 2098763348
+    Data2: 1279888703
+    Data3: 157313975
+    Data4: -1428737891
+  Banks:
+  - {fileID: 7014880229917786984}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 862
 --- !u!114 &8647902971441941531
 MonoBehaviour:
   m_ObjectHideFlags: 0

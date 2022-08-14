@@ -7,6 +7,8 @@ public class PlayerBase : MonoBehaviour
     public int MaxHealth = 3;
     [SerializeField] private IntVariable _health;
     [SerializeField] private GameEvent BaseDamaged;
+    [SerializeField] private GameEvent LastLife;
+    [SerializeField] private GameEvent LoseGame;
 
     private void Start()
     {
@@ -25,6 +27,15 @@ public class PlayerBase : MonoBehaviour
     private void TakeDamage(int damageToTake)
     {
         BaseDamaged.Raise();
-        _health.Value = _health.Value - damageToTake;
+        _health.Value -= damageToTake;
+        if (_health.Value == 1)
+        {
+            LastLife.Raise();
+        }
+
+        if (_health.Value <= 0)
+        {
+            LoseGame.Raise();
+        }
     }
 }

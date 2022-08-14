@@ -48,6 +48,7 @@ public class PlayerSideViewState : PlayerBaseState
     {
         WeaponData currentWeapon = GetWeapon();
         currentWeapon.Fire();
+        Context.WeaponFire.Raise();
         Vector2 mousePosition = GetMousePosition();
         Vector3 origin = new Vector3(64, mousePosition.y, mousePosition.x);
         RaycastHit hit;
@@ -92,12 +93,13 @@ public class PlayerSideViewState : PlayerBaseState
         {
             Debug.Log("Enemy Hit");
             target.GetComponent<Enemy>().TakeDamage(GetWeapon().bulletDamage);
+            
         }
     }
 
     private void OnFrameFillCrossHairReload(float time)
     {
-        GetCrossHair().GetComponent<Image>().fillAmount = 1 - Math.Max(reloadTime, 0) / time;
+        ///GetCrossHair().GetComponent<Image>().fillAmount = 1 - Math.Max(reloadTime, 0) / time;
     }
 
     private void OnFrameFollowMouse()
