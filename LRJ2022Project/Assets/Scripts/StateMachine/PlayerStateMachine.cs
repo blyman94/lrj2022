@@ -13,6 +13,7 @@ public class PlayerStateMachine : MonoBehaviour
     public LayerMask Mask;
     public GameObject FpsCrossHair;
     public List<WeaponData> Weapons;
+    public GameEvent WeaponReload;
 
 
     [Header("State Data")]
