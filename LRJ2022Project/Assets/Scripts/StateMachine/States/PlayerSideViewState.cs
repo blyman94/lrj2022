@@ -9,6 +9,7 @@ public class PlayerSideViewState : PlayerBaseState
     private int weaponIdx = 0;
     private float reloadTime;
     private bool isReloading = false;
+    private List<GameObject> bullets = new List<GameObject>();
 
     public PlayerSideViewState(PlayerStateMachine context)
     {
@@ -17,6 +18,7 @@ public class PlayerSideViewState : PlayerBaseState
         isReloading = true;
         reloadTime = GetWeapon().weaponReloadTime;
         GetWeapon().Init();
+        InitBulletDisplay();
     }
 
     public override void EnterState()
@@ -47,12 +49,12 @@ public class PlayerSideViewState : PlayerBaseState
     {
         WeaponData currentWeapon = GetWeapon();
         currentWeapon.Fire();
+        UpdateBulletDisplay();
         Vector2 mousePosition = GetMousePosition();
         Vector3 origin = new Vector3(64, mousePosition.y, mousePosition.x);
         RaycastHit hit;
         if (Physics.Raycast(origin, Vector3.left, out hit, currentWeapon.weaponRange, Context.Mask))
         {
-            Debug.Log("Hit Something");
             EnemyDetection(hit.transform.gameObject);
         }
         reloadTime = currentWeapon.weaponCooldown; 
@@ -63,6 +65,7 @@ public class PlayerSideViewState : PlayerBaseState
         WeaponData currentWeapon = GetWeapon();
         reloadTime = currentWeapon.weaponReloadTime;
         currentWeapon.Reload();
+        ResetBulletDisplay();
         isReloading = true;
     }
 
@@ -89,7 +92,6 @@ public class PlayerSideViewState : PlayerBaseState
     {
         if (target.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy Hit");
             target.GetComponent<Enemy>().TakeDamage(GetWeapon().bulletDamage);
         }
     }
@@ -120,10 +122,36 @@ public class PlayerSideViewState : PlayerBaseState
     
     public override void OnReload()
     {
-        Debug.Log("R Key Pressed");
         if (!isReloading)
         {
             ReloadWeapon();
+        }
+    }
+
+    private void InitBulletDisplay()
+    {
+        float xCounter = Context.BRBulletDisplay.x;
+        float yConstant = Context.BRBulletDisplay.y;
+        for (int i = 0; i < GetWeapon().remainingBullets; i++)
+        {
+            GameObject bullet = Context.BulletPrefab;
+            UnityEngine.Object.Instantiate(bullet, new Vector3(xCounter, yConstant, 0), Quaternion.identity);
+            bullets.Add(bullet);
+            Debug.Log("Instantiated bullet at： " + new Vector2(xCounter, yConstant));
+            xCounter += Context.BulletDisplayDistance;
+        }
+    }
+
+    private void UpdateBulletDisplay()
+    {
+        bullets[GetWeapon().remainingBullets].GetComponent<Image>().enabled = false;
+    }
+
+    private void ResetBulletDisplay()
+    {
+        for (int i = 0; i < bullets.Count; i++)
+        {
+            bullets[i].GetComponent<Image>().enabled = true;
         }
     }
 

@@ -9,7 +9,10 @@ public class PlayerStateMachine : MonoBehaviour
     public GameEvent SwitchToSideViewEvent;
     public GameEvent SwitchToTopViewEvent;
 
-    [Header("Side View State Data")]
+    [Header("Side View State Data")] 
+    public GameObject BulletPrefab;
+    public Vector2 BRBulletDisplay;
+    public int BulletDisplayDistance;
     public LayerMask Mask;
     public GameObject FpsCrossHair;
     public List<WeaponData> Weapons;
