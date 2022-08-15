@@ -14,13 +14,14 @@ public class PlayerTopViewState : PlayerBaseState
 
     public override void EnterState()
     {
+       
         Context.SwitchToTopViewEvent.Raise();
-        Context.BombCrosshairObject.SetActive(true);
+
     }
 
     public override void ExitState()
     {
-        Context.BombCrosshairObject.SetActive(false);
+     
     }
 
     public override void OnClickGameWorld()
@@ -43,7 +44,7 @@ public class PlayerTopViewState : PlayerBaseState
     public override void UpdateState()
     {
         Context.BombCrosshairObject.transform.position =
-            new Vector3(Context.MousePosition.x, 15.0f, Context.MousePosition.y);
+            new Vector3(Context.MousePosition.x, 32.0f, Context.MousePosition.y);
 
         if (_bombCooldownTimer > 0)
         {
