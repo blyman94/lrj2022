@@ -34,6 +34,7 @@ public class FMODSound : MonoBehaviour
 
     private EventInstance _musicInstance;
     private EventInstance _soundInstance;
+    private EventInstance _alertInstance;
 
     [SerializeField] private IntVariable WaveIndex;
 
@@ -55,11 +56,16 @@ public class FMODSound : MonoBehaviour
     {
         WaveIndex.VariableUpdated -= UpdateGameplayLayers;
     }
+
+    public void PlayListLife()
+    {
+        _alertInstance = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Last Life");
+    }
     
     private void UpdateGameplayLayers()
     {
         int index = 0;
-        index = WaveIndex.Value;
+        index = WaveIndex.Value+1;
         if (index > 4)
         {
             index = 4;
