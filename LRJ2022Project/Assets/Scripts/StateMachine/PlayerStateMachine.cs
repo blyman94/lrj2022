@@ -19,6 +19,8 @@ public class PlayerStateMachine : MonoBehaviour
 
     [Header("State Data")]
     public float BombCooldownTime;
+
+    public FloatVariable bombCooldown;
     public bool IsFirstBomb { get; set; } = true;
     public GameObject BombCrosshairObject;
     public GameObject BombProjectilePrefab;

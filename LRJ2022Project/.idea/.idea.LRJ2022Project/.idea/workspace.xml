@@ -6,25 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="393869f9-e6f3-45fc-bbc1-2a6432afb73d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LRJ2022Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LRJ2022Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Laser.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Laser.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/RailgunShot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/RailgunShot.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Railgun/FrontViewScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Railgun/FrontViewScreen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Railgun/Railgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Railgun/Railgun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Startup/AwakeHandler.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Startup/AwakeHandler.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/ScriptableObjects/Wave Data/Wave Three.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/ScriptableObjects/Wave Data/Wave Three.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/ScriptableObjects/Wave Data/Wave Two.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/ScriptableObjects/Wave Data/Wave Two.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/FpsCrosshair.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/FpsCrosshair.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Animation/BombCrosshair.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Animation/BombCrosshair.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/FMODSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/FMODSound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactions/PlayerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactions/PlayerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/BombProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Props/BombProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/YouLoseScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/YouLoseScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/YouWinScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/YouWinScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/PlayerStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayerSideViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayerSideViewState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayerTopViewState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayerTopViewState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMOD Banks/Master.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMOD Banks/Master.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMOD Banks/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMOD Banks/Master.strings.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +102,8 @@
       <workItem from="1660403041354" duration="1914000" />
       <workItem from="1660455524385" duration="2892000" />
       <workItem from="1660509860088" duration="3549000" />
+      <workItem from="1660533434895" duration="3442000" />
+      <workItem from="1660545859334" duration="1205000" />
     </task>
     <servers />
   </component>
